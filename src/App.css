@@ -1,0 +1,65 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  text-align: center;
+}
+
+.controls-wrapper {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  min-height: 40px; /* Reserve some space to prevent layout shifts when buttons appear */
+}
+
+.timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--brand);
+  background-color: var(--brand-light);
+  border-radius: var(--default-border-radius);
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.control-button,
+.done {
+  color: #4b5563;
+  background-color: #e2e8f0;
+}
+
+.idle {
+  color: #15803d;
+  background-color: #dcfce7;
+}
+
+.active {
+  color: #b91c1c;
+  background-color: #fee2e2;
+}
+
+.done {
+  cursor: default;
+}
+
+.seconds {
+  font-weight: bold;
+}
